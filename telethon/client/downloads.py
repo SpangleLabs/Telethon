@@ -430,6 +430,7 @@ class DownloadMethods:
             return await self._download_web_document(
                 media, file, progress_callback
             )
+        raise ValueError("Could not find any downloadable media for this message")
 
     async def download_file(
             self: 'TelegramClient',
